@@ -1,217 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subrat Pradhan | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Subrat Pradhan - Data Analyst and Data Science Fresher Portfolio">
+  <title>Subrat Pradhan | Data Analyst & Data Science</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
     html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(59,130,246,.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,.055) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .glass { background: rgba(15,23,42,.72); backdrop-filter: blur(14px); }
+    .gradient-text {
+      background: linear-gradient(90deg,#60a5fa,#a78bfa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .card { transition: .25s ease; }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(96,165,250,.5);
+      box-shadow: 0 18px 45px rgba(0,0,0,.25);
+    }
+    .nav-link { position: relative; }
+    .nav-link:after {
+      content:""; position:absolute; left:0; bottom:-7px; width:0; height:2px;
+      background:#60a5fa; transition:.2s ease;
+    }
+    .nav-link:hover:after { width:100%; }
   </style>
 </head>
-<body class="bg-gray-950 text-gray-100">
+
+<body class="bg-slate-950 text-slate-100">
 
 <!-- NAVBAR -->
-<header class="fixed w-full bg-gray-900 shadow z-50">
-  <nav class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-    <h1 class="font-bold text-xl text-orange-500">Subrat Pradhan</h1>
-    <ul class="hidden md:flex space-x-6 text-sm">
-      <li><a href="#home" class="hover:text-orange-400">Home</a></li>
-      <li><a href="#about" class="hover:text-orange-400">About</a></li>
-      <li><a href="#skills" class="hover:text-orange-400">Skills</a></li>
-      <li><a href="#projects" class="hover:text-orange-400">Projects</a></li>
-      <li><a href="#experience" class="hover:text-orange-400">Experience</a></li>
-      <li><a href="#contact" class="hover:text-orange-400">Contact</a></li>
-    </ul>
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/70 bg-slate-950/90 backdrop-blur-xl">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#home" class="text-xl font-extrabold">Subrat<span class="text-blue-400">.</span></a>
+
+    <div class="hidden md:flex gap-7 text-sm text-slate-300">
+      <a class="nav-link hover:text-white" href="#home">Home</a>
+      <a class="nav-link hover:text-white" href="#about">About</a>
+      <a class="nav-link hover:text-white" href="#skills">Skills</a>
+      <a class="nav-link hover:text-white" href="#projects">Projects</a>
+      <a class="nav-link hover:text-white" href="#training">Training</a>
+      <a class="nav-link hover:text-white" href="#education">Education</a>
+      <a class="nav-link hover:text-white" href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-blue-500 px-4 py-2 text-sm font-semibold hover:bg-blue-400">
+      <i class="fa-solid fa-paper-plane"></i> Let's Connect
+    </a>
   </nav>
 </header>
 
+<main>
+
 <!-- HERO -->
-<section id="home" class="pt-28 pb-20 bg-gradient-to-r from-gray-900 to-gray-800">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden grid-bg">
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(59,130,246,.16),transparent_32%),radial-gradient(circle_at_85%_70%,rgba(139,92,246,.13),transparent_30%)]"></div>
+
+  <div class="relative max-w-6xl mx-auto px-5 pt-24 pb-16 grid lg:grid-cols-[1.25fr_.75fr] gap-12 items-center">
     <div>
-      <h2 class="text-4xl font-bold mb-3">Hi, I'm <span class="text-orange-500">Subrat</span></h2>
-      <h3 class="text-2xl font-semibold mb-4">Data Analytics & Machine Learning Fresher</h3>
-      <p class="text-gray-300 mb-6">
-        Passionate about Machine Learning, Deep Learning, and Data Analytics. I enjoy building intelligent systems, predictive models, and data-driven dashboards.
+      <p class="inline-flex items-center gap-2 rounded-full border border-blue-400/20 bg-blue-400/10 px-4 py-2 text-sm text-blue-300 mb-6">
+        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Data Analytics & Data Science Fresher
       </p>
-      <a href="#projects" class="inline-block bg-orange-500 text-black px-6 py-2 rounded-full font-semibold hover:bg-orange-400">View Projects</a>
+
+      <p class="text-lg text-slate-400 mb-2">Hi, I'm</p>
+      <h1 class="text-5xl sm:text-6xl font-extrabold tracking-tight">
+        Subrat <span class="gradient-text">Pradhan</span>
+      </h1>
+
+      <h2 class="text-xl sm:text-2xl font-semibold text-slate-200 mt-4">
+        Aspiring Data Analyst & Data Scientist
+      </h2>
+
+      <p class="max-w-2xl text-slate-400 leading-8 mt-5">
+        Motivated Data Analyst and Data Science Fresher with strong knowledge of
+        SQL, Python, Excel, Power BI, Tableau, and Machine Learning. I enjoy
+        transforming data into meaningful insights and building practical,
+        data-driven solutions.
+      </p>
+
+      <div class="flex flex-wrap gap-3 mt-8">
+        <a href="#projects" class="inline-flex items-center gap-2 rounded-xl bg-blue-500 px-5 py-3 font-semibold hover:bg-blue-400 transition">
+          <i class="fa-solid fa-chart-line"></i> View Projects
+        </a>
+      </div>
+
+      <div class="flex flex-wrap gap-2 mt-8 text-xs text-slate-400">
+        <span class="border border-slate-800 rounded-full px-3 py-1.5">SQL</span>
+        <span class="border border-slate-800 rounded-full px-3 py-1.5">Python</span>
+        <span class="border border-slate-800 rounded-full px-3 py-1.5">Excel</span>
+        <span class="border border-slate-800 rounded-full px-3 py-1.5">Power BI</span>
+        <span class="border border-slate-800 rounded-full px-3 py-1.5">Tableau</span>
+        <span class="border border-slate-800 rounded-full px-3 py-1.5">Machine Learning</span>
+      </div>
     </div>
+
     <div class="flex justify-center">
-      <img src="https://avatars.githubusercontent.com/u/000000000?v=4" alt="profile" class="w-64 h-64 rounded-full border-4 border-orange-500 object-cover">
+      <div class="glass border border-slate-800 rounded-3xl p-6 w-full max-w-sm">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <p class="text-xs text-slate-500 uppercase tracking-widest">Data Toolkit</p>
+            <p class="font-bold mt-1">Analytics • Visualization • ML</p>
+          </div>
+          <i class="fa-solid fa-database text-2xl text-blue-400"></i>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 p-4">
+            <i class="fa-brands fa-python text-2xl text-blue-400"></i>
+            <p class="font-semibold mt-2">Python</p>
+            <p class="text-xs text-slate-500">Analysis & ML</p>
+          </div>
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 p-4">
+            <i class="fa-solid fa-code text-2xl text-cyan-400"></i>
+            <p class="font-semibold mt-2">SQL</p>
+            <p class="text-xs text-slate-500">Querying</p>
+          </div>
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 p-4">
+            <i class="fa-solid fa-chart-pie text-2xl text-yellow-400"></i>
+            <p class="font-semibold mt-2">Power BI</p>
+            <p class="text-xs text-slate-500">Dashboards</p>
+          </div>
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 p-4">
+            <i class="fa-solid fa-table-columns text-2xl text-purple-400"></i>
+            <p class="font-semibold mt-2">Tableau</p>
+            <p class="text-xs text-slate-500">Visualization</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-20">
-  <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-orange-500 mb-6">About Me</h2>
-    <p class="text-gray-300 leading-relaxed">
-      I am Subrat Pradhan, an MCA student and Data Analytics & Machine Learning fresher. I have hands-on experience with Python, SQL, Pandas, NumPy, Scikit-learn, and deep learning frameworks like TensorFlow/Keras. I enjoy solving real-world problems using data and AI technologies.
-    </p>
+<section id="about" class="py-24 border-t border-slate-900">
+  <div class="max-w-5xl mx-auto px-5">
+    <p class="text-blue-400 text-sm font-semibold uppercase tracking-widest">About Me</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-10">Data-driven problem solver</h2>
+
+    <div class="grid md:grid-cols-[1.5fr_.8fr] gap-7">
+      <div class="glass border border-slate-800 rounded-3xl p-7 text-slate-300 leading-8">
+        <p>
+          I am a Data Analyst and Data Science Fresher with a strong foundation
+          in SQL, Python, Excel, Power BI, Tableau, and Machine Learning.
+          I am currently pursuing industry-oriented Data Analytics & Data Science
+          training at QSpiders, Bangalore.
+        </p>
+        <p class="mt-5">
+          I have practical knowledge of data cleaning, exploratory data analysis
+          (EDA), data visualization, dashboard development, and predictive modeling.
+          I enjoy working with data to identify patterns, generate insights, and
+          solve real-world business problems.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+          <p class="text-xs text-slate-500 uppercase">Target Roles</p>
+          <p class="font-semibold mt-2">Data Analyst · Data Scientist</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+          <p class="text-xs text-slate-500 uppercase">MCA</p>
+          <p class="font-semibold mt-2">Machine Learning</p>
+          <p class="text-sm text-blue-400 mt-1">CGPA: 8.62</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+          <p class="text-xs text-slate-500 uppercase">Based In</p>
+          <p class="font-semibold mt-2">Bhubaneswar, Odisha</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-20 bg-gray-900">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-orange-500 mb-10">Skills</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-gray-800 p-4 rounded">Python</div>
-      <div class="bg-gray-800 p-4 rounded">Machine Learning</div>
-      <div class="bg-gray-800 p-4 rounded">Deep Learning (CNN, ANN)</div>
-      <div class="bg-gray-800 p-4 rounded">SQL</div>
-      <div class="bg-gray-800 p-4 rounded">Pandas & NumPy</div>
-      <div class="bg-gray-800 p-4 rounded">TensorFlow / Keras</div>
-      <div class="bg-gray-800 p-4 rounded">Tableau</div>
-      <div class="bg-gray-800 p-4 rounded">Java</div>
-      <div class="bg-gray-800 p-4 rounded">C</div>
-      <div class="bg-gray-800 p-4 rounded">C++</div>
-      <div class="bg-gray-800 p-4 rounded">HTML & CSS</div>
-      <div class="bg-gray-800 p-4 rounded">Power BI</div>
-      <div class="bg-gray-800 p-4 rounded">.net</div>
-      <div class="bg-gray-800 p-4 rounded">Gen AI</div>
-      <div class="bg-gray-800 p-4 rounded">Excel</div>
-      <div class="bg-gray-800 p-4 rounded">Streamlit</div>
+<section id="skills" class="py-24 bg-slate-900/45 border-y border-slate-900">
+  <div class="max-w-6xl mx-auto px-5">
+    <p class="text-blue-400 text-sm font-semibold uppercase tracking-widest">Skills</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-10">Technical toolkit</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-6">
+        <i class="fa-solid fa-code text-2xl text-blue-400"></i>
+        <h3 class="font-bold text-lg mt-4">Programming & Querying</h3>
+        <p class="text-slate-400 text-sm leading-7 mt-2">SQL, Python</p>
+      </div>
+
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-6">
+        <i class="fa-solid fa-database text-2xl text-cyan-400"></i>
+        <h3 class="font-bold text-lg mt-4">Databases</h3>
+        <p class="text-slate-400 text-sm leading-7 mt-2">Oracle SQL, MySQL</p>
+      </div>
+
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-6">
+        <i class="fa-solid fa-chart-column text-2xl text-yellow-400"></i>
+        <h3 class="font-bold text-lg mt-4">Data Visualization</h3>
+        <p class="text-slate-400 text-sm leading-7 mt-2">MS Excel, Power BI, Tableau</p>
+      </div>
+
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-6">
+        <i class="fa-brands fa-python text-2xl text-blue-400"></i>
+        <h3 class="font-bold text-lg mt-4">Python Libraries</h3>
+        <p class="text-slate-400 text-sm leading-7 mt-2">Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn</p>
+      </div>
+
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-6">
+        <i class="fa-solid fa-brain text-2xl text-purple-400"></i>
+        <h3 class="font-bold text-lg mt-4">Machine Learning</h3>
+        <p class="text-slate-400 text-sm leading-7 mt-2">Data Preprocessing, Feature Engineering, Classification, Regression, Model Evaluation</p>
+      </div>
+
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-6">
+        <i class="fa-solid fa-chart-line text-2xl text-emerald-400"></i>
+        <h3 class="font-bold text-lg mt-4">Analytical Skills</h3>
+        <p class="text-slate-400 text-sm leading-7 mt-2">Data Cleaning, EDA, Data Visualization, Dashboard Development, Descriptive Statistics</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-24 relative overflow-hidden">
-  <!-- anime glow bg -->
-  <div class="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-gray-900 to-black"></div>
-  <div class="relative max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-extrabold text-orange-400 mb-12 tracking-wide">
-      🚀 Projects
-    </h2>
+<section id="projects" class="py-24">
+  <div class="max-w-6xl mx-auto px-5">
+    <p class="text-blue-400 text-sm font-semibold uppercase tracking-widest">Projects</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-10">Featured work</h2>
 
-    <div class="grid md:grid-cols-2 gap-10">
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="card rounded-3xl border border-slate-800 bg-slate-900/60 p-7">
+        <div class="flex items-center justify-between">
+          <span class="h-11 w-11 rounded-2xl bg-purple-500/10 text-purple-400 flex items-center justify-center">
+            <i class="fa-solid fa-brain"></i>
+          </span>
+          <span class="text-xs text-slate-500">Deep Learning</span>
+        </div>
+        <h3 class="text-xl font-bold mt-6">Brain Tumor Classification</h3>
+        <p class="text-slate-400 leading-7 mt-3">
+          Developed a CNN-based deep learning model for brain tumor classification
+          using MRI images. Performed image preprocessing, data augmentation, and
+          model evaluation using TensorFlow and Keras.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span class="tag">Python</span><span class="tag">TensorFlow</span>
+          <span class="tag">Keras</span><span class="tag">CNN</span>
+        </div>
+      </article>
 
-      <!-- 1 -->
-      <div class="bg-gray-900/80 backdrop-blur border border-orange-500/40 rounded-2xl p-6 hover:scale-105 transition duration-300 shadow-[0_0_25px_rgba(249,115,22,0.4)]">
-        <h3 class="text-xl font-bold text-orange-400 mb-2">🧠 Brain Tumor Classification</h3>
-        <p class="text-gray-300 text-sm mb-3">CNN-based deep learning model for MRI brain image classification.</p>
-        <span class="text-xs text-orange-300">Tech: Python • TensorFlow/Keras • CNN • Streamlit</span>
+      <article class="card rounded-3xl border border-slate-800 bg-slate-900/60 p-7">
+        <div class="flex items-center justify-between">
+          <span class="h-11 w-11 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </span>
+          <span class="text-xs text-slate-500">Machine Learning</span>
+        </div>
+        <h3 class="text-xl font-bold mt-6">Student Performance Prediction</h3>
+        <p class="text-slate-400 leading-7 mt-3">
+          Developed a Random Forest model to predict student performance.
+          Performed data cleaning, exploratory data analysis (EDA), and
+          feature engineering.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span class="tag">Python</span><span class="tag">Pandas</span>
+          <span class="tag">Scikit-learn</span><span class="tag">Random Forest</span>
+        </div>
+      </article>
+
+      <article class="card md:col-span-2 rounded-3xl border border-slate-800 bg-slate-900/60 p-7">
+        <div class="flex items-center justify-between">
+          <span class="h-11 w-11 rounded-2xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center">
+            <i class="fa-solid fa-store"></i>
+          </span>
+          <span class="text-xs text-slate-500">Data Visualization</span>
+        </div>
+        <h3 class="text-xl font-bold mt-6">Retail Store Location Optimization</h3>
+        <p class="text-slate-400 leading-7 mt-3">
+          Designed an interactive Tableau dashboard for retail location analysis.
+          Analyzed sales trends and customer demographics to generate business insights.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span class="tag">Tableau</span><span class="tag">Microsoft Excel</span>
+          <span class="tag">Data Visualization</span><span class="tag">Business Insights</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINING -->
+<section id="training" class="py-24 bg-slate-900/45 border-y border-slate-900">
+  <div class="max-w-5xl mx-auto px-5">
+    <p class="text-blue-400 text-sm font-semibold uppercase tracking-widest">Training</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-10">Industry-oriented learning</h2>
+
+    <div class="rounded-3xl border border-slate-800 bg-slate-950/70 p-7">
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-3">
+        <div>
+          <h3 class="text-xl font-bold">Data Analytics & Data Science Training</h3>
+          <p class="text-blue-400 mt-1">QSpiders, Bangalore</p>
+        </div>
+        <span class="text-sm text-slate-500">Aug 2026 – Present</span>
       </div>
 
-      <!-- 2 -->
-      <div class="bg-gray-900/80 backdrop-blur border border-purple-500/40 rounded-2xl p-6 hover:scale-105 transition duration-300 shadow-[0_0_25px_rgba(168,85,247,0.4)]">
-        <h3 class="text-xl font-bold text-purple-400 mb-2">📊 Student Performance Prediction</h3>
-        <p class="text-gray-300 text-sm mb-3">ML model to predict academic performance using regression & Random Forest.</p>
-        <span class="text-xs text-purple-300">Tech: Python • Pandas • Scikit-learn • ML</span>
-      </div>
-
-      <!-- 3 -->
-      <div class="bg-gray-900/80 backdrop-blur border border-red-500/40 rounded-2xl p-6 hover:scale-105 transition duration-300 shadow-[0_0_25px_rgba(239,68,68,0.4)]">
-        <h3 class="text-xl font-bold text-red-400 mb-2">🩺 Breast Cancer Detection</h3>
-        <p class="text-gray-300 text-sm mb-3">ML classifier to detect malignant vs benign tumors.</p>
-        <span class="text-xs text-red-300">Tech: Python • SVM • Logistic Regression • Random Forest</span>
-      </div>
-
-      <!-- 4 -->
-      <div class="bg-gray-900/80 backdrop-blur border border-green-500/40 rounded-2xl p-6 hover:scale-105 transition duration-300 shadow-[0_0_25px_rgba(34,197,94,0.4)]">
-        <h3 class="text-xl font-bold text-green-400 mb-2">🌱 Plant Disease Prediction</h3>
-        <p class="text-gray-300 text-sm mb-3">CNN model for classifying plant leaf diseases from images.</p>
-        <span class="text-xs text-green-300">Tech: Python • TensorFlow • CNN • OpenCV</span>
-      </div>
-
-      <!-- 5 -->
-      <div class="md:col-span-2 bg-gray-900/80 backdrop-blur border border-cyan-500/40 rounded-2xl p-8 hover:scale-105 transition duration-300 shadow-[0_0_30px_rgba(34,211,238,0.45)]">
-        <h3 class="text-2xl font-bold text-cyan-400 mb-3">📚 Smart Library Management System</h3>
-        <p class="text-gray-300 text-sm mb-3">Java-based desktop application for managing books, users, issue/return workflow with secure database integration.</p>
-        <span class="text-xs text-cyan-300">Tech: Java • Java Swing • JDBC • MySQL</span>
-      </div>
-
-      <!-- 6 -->
-      <div class="md:col-span-2 bg-gray-900/80 backdrop-blur border border-yellow-500/40 rounded-2xl p-8 hover:scale-105 transition duration-300 shadow-[0_0_30px_rgba(250,204,21,0.45)]">
-        <h3 class="text-2xl font-bold text-yellow-400 mb-3">🏪 Retail Store Location Optimization</h3>
-        <p class="text-gray-300 text-sm mb-4">Data analytics project to identify optimal retail store locations using interactive dashboards and regional analysis.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="px-3 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/40">Tableau</span>
-          <span class="px-3 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/40">Data Visualization</span>
-          <span class="px-3 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/40">Excel</span>
-          <span class="px-3 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/40">Python (Data Cleaning)</span>
-          <span class="px-3 py-1 text-xs rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/40">EDA</span>
+      <div class="mt-6 grid sm:grid-cols-2 gap-3">
+        <div class="rounded-2xl border border-slate-800 p-4 text-sm text-slate-400">
+          <i class="fa-solid fa-check text-emerald-400 mr-2"></i>
+          SQL, Python, Excel, Power BI, Tableau
+        </div>
+        <div class="rounded-2xl border border-slate-800 p-4 text-sm text-slate-400">
+          <i class="fa-solid fa-check text-emerald-400 mr-2"></i>
+          Statistics & Machine Learning fundamentals
+        </div>
+        <div class="rounded-2xl border border-slate-800 p-4 text-sm text-slate-400">
+          <i class="fa-solid fa-check text-emerald-400 mr-2"></i>
+          Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+        </div>
+        <div class="rounded-2xl border border-slate-800 p-4 text-sm text-slate-400">
+          <i class="fa-solid fa-check text-emerald-400 mr-2"></i>
+          EDA, predictive modeling & dashboards
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- CERTIFICATIONS -->
+<section class="py-20">
+  <div class="max-w-5xl mx-auto px-5">
+    <p class="text-blue-400 text-sm font-semibold uppercase tracking-widest">Certifications</p>
+    <h2 class="text-3xl font-extrabold mt-2 mb-8">Credentials</h2>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <i class="fa-solid fa-certificate text-yellow-400"></i>
+        <p class="font-semibold mt-3">GeeksforGeeks 16-Week Placement Training Program – CUTM</p>
+      </div>
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <i class="fa-solid fa-database text-blue-400"></i>
+        <p class="font-semibold mt-3">SQL and SQL for Data Analysis – Udemy</p>
+      </div>
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
+        <i class="fa-solid fa-chart-column text-purple-400"></i>
+        <p class="font-semibold mt-3">Power BI Micro Course, SQL Micro Course – Skill Course</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- EDUCATION -->
-<section id="education" class="py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="bg-gray-900/80 backdrop-blur rounded-3xl border border-orange-500/30 p-10 shadow-[0_0_40px_rgba(249,115,22,0.35)]">
-      <h2 class="text-3xl font-bold text-orange-500 mb-10">🎓 Education</h2>
+<section id="education" class="py-24 bg-slate-900/45 border-y border-slate-900">
+  <div class="max-w-5xl mx-auto px-5">
+    <p class="text-blue-400 text-sm font-semibold uppercase tracking-widest">Education</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-10">Academic background</h2>
 
-      <div class="space-y-8">
-        <!-- MCA -->
-        <div class="bg-gray-950/80 rounded-2xl p-6 border border-orange-500/40 shadow-[0_0_25px_rgba(249,115,22,0.4)]">
-          <h3 class="text-xl font-semibold text-orange-400">Master of Computer Applications (MCA)</h3>
-          <p class="text-gray-300">Centurion University of Technology and Management</p>
-          <p class="text-sm text-gray-400">📍 Bhubaneswar, Odisha</p>
-          <p class="text-sm text-gray-400">2024 – 2026</p>
+    <div class="space-y-5">
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-7 flex flex-col sm:flex-row sm:justify-between gap-4">
+        <div>
+          <h3 class="text-xl font-bold">Master of Computer Applications (Machine Learning)</h3>
+          <p class="text-slate-400 mt-2">Centurion University of Technology and Management, Bhubaneswar</p>
+          <p class="text-sm text-slate-500 mt-1">2024 – 2026</p>
         </div>
-
-        <!-- BCA -->
-        <div class="bg-gray-950/80 rounded-2xl p-6 border border-purple-500/40 shadow-[0_0_25px_rgba(168,85,247,0.4)]">
-          <h3 class="text-xl font-semibold text-purple-400">Bachelor of Computer Applications (BCA)</h3>
-          <p class="text-gray-300">Bhadrak Autonomous College</p>
-          <p class="text-sm text-gray-400">📍 Bhadrak, Odisha</p>
-          <p class="text-sm text-gray-400">2021 – 2024</p>
-        </div>
-
-        <!-- 12th -->
-        <div class="bg-gray-950/80 rounded-2xl p-6 border border-green-500/40 shadow-[0_0_25px_rgba(34,197,94,0.4)]">
-          <h3 class="text-xl font-semibold text-green-400">Higher Secondary Education (Science)</h3>
-          <p class="text-gray-300">Bidwan Residential College</p>
-          <p class="text-sm text-gray-400">📍 Odisha</p>
-          <p class="text-sm text-gray-400">2019 – 2021</p>
-        </div>
+        <div class="text-blue-400 font-bold">CGPA: 8.62</div>
       </div>
-    </div>
-  </div>
-</section>
 
-
-<!-- EXPERIENCE -->
-<section id="experience" class="py-20 bg-gray-900">
-  <div class="max-w-5xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-orange-500 mb-8">Experience</h2>
-    <div class="space-y-6">
-      <div>
-        <h3 class="font-semibold">AI Training – Acmegrade</h3>
-        <p class="text-sm text-gray-400">June 2025 – July 2025</p>
-        <p class="text-gray-300">Worked on ML, DL, neural networks, preprocessing, and mini projects.</p>
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-7 flex flex-col sm:flex-row sm:justify-between gap-4">
+        <div>
+          <h3 class="text-xl font-bold">Bachelor of Computer Applications (BCA)</h3>
+          <p class="text-slate-400 mt-2">Bhadrak Autonomous College, Bhadrak</p>
+          <p class="text-sm text-slate-500 mt-1">2021 – 2024</p>
+        </div>
+        <div class="text-blue-400 font-bold">CGPA: 7.82</div>
       </div>
-      <div>
-        <h3 class="font-semibold">Automation Testing Internship – TimesPro</h3>
-        <p class="text-sm text-gray-400">July 2025 – August 2025</p>
-        <p class="text-gray-300">Test case design, functional & regression testing, automation basics.</p>
+
+      <div class="card rounded-3xl border border-slate-800 bg-slate-950/70 p-7 flex flex-col sm:flex-row sm:justify-between gap-4">
+        <div>
+          <h3 class="text-xl font-bold">Higher Secondary (CHSE Odisha)</h3>
+          <p class="text-slate-400 mt-2">Bidwan Residential Higher Secondary School, Jajpur</p>
+          <p class="text-sm text-slate-500 mt-1">2019 – 2021</p>
+        </div>
+        <div class="text-blue-400 font-bold">77.67%</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-orange-500 mb-6">Contact Me</h2>
-    <p>Email: <a href="mailto:subratpradhan485@gmail.com" class="text-orange-400">subratpradhan485@gmail.com</a></p>
-    <p>Phone: <span class="text-orange-400">+91 7735335402</span></p>
-    <div class="flex justify-center space-x-6 mt-6">
-      <a href="https://github.com/Subrat398" target="_blank" class="hover:text-orange-400">GitHub</a>
-      <a href="https://www.linkedin.com/in/subrat-pradhan-543728362" target="_blank" class="hover:text-orange-400">LinkedIn</a>
+<section id="contact" class="py-24">
+  <div class="max-w-4xl mx-auto px-5 text-center">
+    <p class="text-blue-400 text-sm font-semibold uppercase tracking-widest">Contact</p>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Let's connect</h2>
+    <p class="text-slate-400 mt-4">
+      Open to entry-level opportunities in Data Analytics and Data Science.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-3 mt-8">
+      <a href="mailto:subratpradhan485@gmail.com"
+         class="rounded-xl border border-slate-800 bg-slate-900 px-5 py-3 hover:border-blue-400 transition">
+        <i class="fa-solid fa-envelope mr-2 text-blue-400"></i>Email
+      </a>
+
+      <a href="tel:+917735335402"
+         class="rounded-xl border border-slate-800 bg-slate-900 px-5 py-3 hover:border-blue-400 transition">
+        <i class="fa-solid fa-phone mr-2 text-emerald-400"></i>Phone
+      </a>
+
+      <a href="https://www.linkedin.com/in/subrat-pradhan-543728362"
+         target="_blank"
+         class="rounded-xl border border-slate-800 bg-slate-900 px-5 py-3 hover:border-blue-400 transition">
+        <i class="fa-brands fa-linkedin mr-2 text-blue-400"></i>LinkedIn
+      </a>
+
+      <a href="https://github.com/subratpradhan"
+         target="_blank"
+         class="rounded-xl border border-slate-800 bg-slate-900 px-5 py-3 hover:border-blue-400 transition">
+        <i class="fa-brands fa-github mr-2"></i>GitHub
+      </a>
+
     </div>
+
+    <p class="mt-7 text-sm text-slate-500">+91-7735335402 · subratpradhan485@gmail.com</p>
   </div>
 </section>
 
-<footer class="text-center py-4 text-sm text-gray-500">© 2025 Subrat Pradhan</footer>
+</main>
+
+<footer class="border-t border-slate-900 py-7 text-center text-sm text-slate-500">
+  © 2026 Subrat Pradhan · Data Analyst & Data Science Portfolio
+</footer>
+
+<script>
+  document.querySelectorAll('.tag').forEach(el => {
+    el.className = 'px-3 py-1 rounded-full border border-slate-700 bg-slate-950 text-xs text-slate-300';
+  });
+</script>
 
 </body>
 </html>
